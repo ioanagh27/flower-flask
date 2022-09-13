@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from urllib import request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -20,6 +21,16 @@ def flower():
     ]   
     return render_template("flowers.html", page_title="Flower List", flowers=flowers)
 
+@app.route("/flowers/new", methods=["GET", "POST"])
+def new_flower():
+    if request.method == 'GET':
+        return 'This works for post request'
+    else:
+        data = request.get_json()
+        if data["color"] != "invisible":
+            return "Yes, that seems a legitimate flower", 201
+        else:
+             return "Absolutly not", 400
 
 if __name__ == '__main__':
     app.run(debug = True)
