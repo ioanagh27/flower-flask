@@ -6,3 +6,8 @@ A site for all your petal-related needs.
 
 - `pipenv install --dev`
 - `pipenv run dev`
+
+## Testing
+
+- `pipenv run test`: run all tests.
+- `pipenv run coverage`: generate a coverage report.

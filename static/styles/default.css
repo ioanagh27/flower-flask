@@ -1,0 +1,31 @@
+article {
+    color: rgb(1, 0, 5);
+}
+
+body {
+    background-color: rgb(48, 47, 47);
+}
+
+h1 {
+    color: blue;
+    text-align: center;    
+    font-size: 40px;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #2d79eb, #5ceb98);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 20%;
+}
+
+.flower-bed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flower {
+    width: 110px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1rem;
+}
